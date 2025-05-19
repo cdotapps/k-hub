@@ -1,5 +1,5 @@
 import { Catalog } from "./catalog.model";
-
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export interface Prompt extends Catalog {
   id: string;
@@ -22,6 +22,6 @@ export interface PromptCategory {
   name: string;
   description: string;
   count: number;
-  iconName: string;
+  iconName: IconProp;
 }
 

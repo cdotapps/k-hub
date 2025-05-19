@@ -7,7 +7,7 @@ import { FontawesomeModule } from '../../shared/fontawesome.module';
   standalone: true,
   imports: [CommonModule, FontawesomeModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
 

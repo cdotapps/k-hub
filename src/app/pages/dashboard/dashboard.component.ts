@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontawesomeModule } from '../../shared/fontawesome.module';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
-import { BaseChartDirective } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface Activity {
   id: number;
   type: string;
   title: string;
   date: Date;
-  icon: string;
+  icon: IconProp;
 }
 
 interface PopularContent {
@@ -19,15 +20,15 @@ interface PopularContent {
   views: number;
   likes: number;
   category: string;
-  icon: string;
+  icon: IconProp;
 }
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.css',
+  styleUrls: ['./dashboard.component.css'],
   standalone: true,
-  imports: [CommonModule, FontawesomeModule, BaseChartDirective]
+  imports: [CommonModule, FontawesomeModule, NgChartsModule]
 })
 export class DashboardComponent implements OnInit {
   notificationCount = 3;
@@ -227,14 +228,14 @@ export class DashboardComponent implements OnInit {
     // You could fetch real data here from a service
   }
 
-  getActivityIcon(type: string): string {
+  getActivityIcon(type: string): IconProp {
     switch (type.toLowerCase()) {
-      case 'article': return 'book-reader';
-      case 'video': return 'video';
-      case 'course': return 'graduation-cap';
-      case 'discussion': return 'comments';
-      case 'quiz': return 'tasks';
-      default: return 'file';
+      case 'article': return 'book-reader' as IconProp;
+      case 'video': return 'video' as IconProp;
+      case 'course': return 'graduation-cap' as IconProp;
+      case 'discussion': return 'comments' as IconProp;
+      case 'quiz': return 'tasks' as IconProp;
+      default: return 'file' as IconProp;
     }
   }
 

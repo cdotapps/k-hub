@@ -8,6 +8,7 @@ import { Prompt, PromptCategory } from '../../core/models/prompt.model';
 import { debounceTime, distinctUntilChanged, Subject, finalize, catchError, EMPTY } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { PromptCardComponent } from '../../components/prompt-card/prompt-card.component';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-prompts',
@@ -133,9 +134,9 @@ export class PromptsComponent implements OnInit {
     return category ? category.name : 'Unknown Category';
   }
 
-  getCategoryIcon(categoryId: string): string {
+  getCategoryIcon(categoryId: string): IconProp {
     const category = this.categories.find(c => c.id === categoryId);
-    return category ? category.iconName : 'folder';
+    return category ? category.iconName as IconProp : 'folder' as IconProp;
   }
 
   filterPrompts(): void {

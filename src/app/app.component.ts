@@ -7,7 +7,7 @@ import { FontawesomeModule } from './shared/fontawesome.module';
   standalone: true,
   imports: [RouterOutlet, FontawesomeModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'K-Hub';

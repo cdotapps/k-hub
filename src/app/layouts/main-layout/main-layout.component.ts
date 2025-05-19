@@ -3,11 +3,12 @@ import { RouterOutlet, RouterLink, Router, NavigationEnd } from '@angular/router
 import { FontawesomeModule } from '../../shared/fontawesome.module';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface MenuItem {
   name: string;
   route: string;
-  icon: string;
+  icon: IconProp;
 }
 
 interface MenuSection {
