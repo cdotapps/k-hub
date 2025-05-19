@@ -1,7 +1,7 @@
 /* Dashboard Container */
 .dashboard-container {
   padding: var(--spacing-md);
-  max-width: 1400px;
+  max-width: 95%;
   margin: 0 auto;
 }
 

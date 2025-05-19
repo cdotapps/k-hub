@@ -16,6 +16,8 @@
   </div>
   
   <div class="card-content">
+    <!-- Content projection for prompt ID in grid view -->
+    <ng-content></ng-content>
     <h3 class="prompt-title" [title]="prompt.title">{{ prompt.title }}</h3>
     <p class="prompt-description">{{ prompt.description }}</p>
     
@@ -79,6 +81,8 @@
       </div>
     </div>
     
+    <!-- Content projection for prompt ID in list view -->
+    <ng-content></ng-content>
     <p class="prompt-description">{{ prompt.description }}</p>
     
     <div class="list-item-footer">

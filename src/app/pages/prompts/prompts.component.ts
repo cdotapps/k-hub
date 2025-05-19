@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { FontawesomeModule } from '../../shared/fontawesome.module';
 import { PromptService } from '../../services/prompt.service';
 import { Prompt, PromptCategory } from '../../core/models/prompt.model';
@@ -41,7 +41,7 @@ export class PromptsComponent implements OnInit {
   private destroy$ = new Subject<void>();
   private searchSubject = new Subject<string>();
 
-  constructor(private promptService: PromptService) {}
+  constructor(private promptService: PromptService, private router: Router) {}
 
   ngOnInit(): void {
     // Setup search debounce
@@ -189,8 +189,8 @@ export class PromptsComponent implements OnInit {
   }
 
   viewPrompt(prompt: Prompt): void {
-    // In a real app, navigate to prompt detail page
-    console.log('View prompt:', prompt);
+    // Navigate to prompt detail page
+    this.router.navigate(['/prompts', prompt.id]);
   }
 
   usePrompt(prompt: Prompt): void {

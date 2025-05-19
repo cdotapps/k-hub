@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PromptsComponent } from './pages/prompts/prompts.component';
+import { PromptDetailComponent } from './pages/prompts/prompt-detail/prompt-detail.component';
 
 export const routes: Routes = [
   {
@@ -25,6 +26,10 @@ export const routes: Routes = [
       {
         path: 'prompts',
         component: PromptsComponent
+      },
+      {
+        path: 'prompts/:id',
+        component: PromptDetailComponent
       }
       // Additional routes will go here
     ]

@@ -131,26 +131,12 @@ export class MainLayoutComponent implements OnInit {
   
   // Update page title based on current route
   updatePageTitle(url: string): void {
-    if (url === '/' || url === '/home') {
-      this.currentPageTitle = 'Knowledge Hub';
-    } else if (url === '/discover') {
-      this.currentPageTitle = 'Discover Content';
-    } else if (url === '/my-learning') {
-      this.currentPageTitle = 'My Learning Path';
-    } else if (url === '/articles') {
-      this.currentPageTitle = 'Articles';
-    } else if (url === '/tutorials') {
-      this.currentPageTitle = 'Tutorials';
-    } else if (url === '/forums') {
-      this.currentPageTitle = 'Discussion Forums'; 
-    } else {
-      // Extract the page name from the URL
-      const pageName = url.split('/').pop() || '';
-      // Convert kebab-case to Title Case with spaces
-      this.currentPageTitle = pageName
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+    if (url === '/' || url === '/dashboard') {
+      this.currentPageTitle = 'Dashboard';
+    } else if (url === '/prompts') {
+      this.currentPageTitle = 'Prompts';
+    } else if (url === '/videos') {
+      this.currentPageTitle = 'Videos';
     }
   }
 }

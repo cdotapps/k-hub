@@ -80,7 +80,11 @@ import {
   faBalanceScale, // Added for hedge accounting category
   faIndustry,     // Added for MRP category
   faLeaf,         // Added for ESR category
-  faCalculator    // Added for FP&A category
+  faCalculator,   // Added for FP&A category
+  // Prompt detail page icons
+  faArrowLeft,    // Added arrow-left icon for back button
+  faPlay,         // Added play icon for use prompt button
+  faCopy          // Added copy icon for copying prompt content
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -183,6 +187,11 @@ export class FontawesomeModule {
       faIndustry,
       faLeaf,
       faCalculator,
+      
+      // Prompt detail page icons
+      faArrowLeft,
+      faPlay,
+      faCopy,
       
       // Brand icons
       faFacebook,
