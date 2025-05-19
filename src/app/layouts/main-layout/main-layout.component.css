@@ -208,6 +208,15 @@
   padding-top: 0;
 }
 
+.sidebar-title {
+  font-family: var(--heading-font);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  text-align: center;
+}
+
 /* Navigation */
 .nav-list {
   padding: 0;
